@@ -2,6 +2,8 @@
 #import <React/RCTComponent.h>
 #import "MWTapDetectingImageView.h"
 #import "MWTapDetectingView.h"
+#import <SDWebImage/SDAnimatedImageView+WebCache.h>
+#import <SDWebImage/SDWebImageDownloader.h>
 
 @class RCTBridge;
 
