@@ -290,14 +290,14 @@
 - (void)setSource:(NSDictionary *)source {
     __weak RNPhotoView *weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([weakSelf.source isEqualToDictionary:source]) {
+        if ([_source isEqualToDictionary:source]) {
             return;
         }
         NSString *uri = source[@"uri"];
         if (!uri) {
             return;
         }
-        weakSelf.source = source;
+        _source = source;
         NSURL *imageURL = [NSURL URLWithString:uri];
 
         if (![[uri substringToIndex:4] isEqualToString:@"http"]) {
